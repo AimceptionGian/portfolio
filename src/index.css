@@ -11,3 +11,75 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+h1 {
+  font-size: 8vh;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+
+  margin:  0px;
+}
+
+.First-name {
+  background: repeating-linear-gradient(
+    to right,
+    white 0%,
+    white 66.7%,
+    #282c34 50%,
+    #282c34 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  margin-right: 25%;
+}
+
+.Name {
+  background: repeating-linear-gradient(
+    to right,
+    white 0%,
+    white 33.3%,
+    #282c34 30%,
+    #282c34 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  margin-left: 25%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.Nav-button {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-size: medium;
+
+  color: white;
+  background-color: #282c34;
+
+  padding: 1cap;
+  margin: 1cap;
+
+  border-radius: 1cap;
+}
+
+.Nav-button:hover {
+  background-color: white;
+  color: #282c34;
+}
