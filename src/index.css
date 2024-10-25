@@ -14,14 +14,27 @@ code {
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-h1 {
-  font-size: 8vh;
+h1, p {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
 
   margin:  0px;
+}
+
+h1 {
+  font-size: 12vh;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+
+  margin:  0px;
+}
+
+p {
+  font-size: 1.75vh;
 }
 
 .First-name {
@@ -75,6 +88,8 @@ li {
 
   padding: 1cap;
   margin: 1cap;
+
+  width: fit-content;
 
   border-radius: 1cap;
 }

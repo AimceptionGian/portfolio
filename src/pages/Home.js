@@ -12,7 +12,7 @@ export default function Home() {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'flex-end', height: '100vh' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', width: '40%', position: 'absolute', top: '50%', left: '25%', transform: 'translate(-50%, -50%)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '100vh', position: 'absolute', top: '40%', left: '35%', transform: 'translate(-50%, -50%)' }}>
                 <h1 className='First-name'>Gian</h1>
                 <h1 className='Name'>Oechslin</h1>
             </div>
@@ -27,8 +27,12 @@ export default function Home() {
                         </li>
                     </ul>
                 </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '17%', position: 'absolute', top: '70%', left: '17%', transform: 'translate(-50%, -50%)' }}>
+                    <p>Interessiert an einer Zusammenarbeit oder haben Sie Fragen?</p>
+                    <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}>Kontakt</div>
+                </div>
             </div>
-            <img src={white} style={{ width: '75%', objectFit: 'cover' }} />
+            <img src={white} style={{ width: '65%', objectFit: 'cover' }} />
         </div>
     )
 }
