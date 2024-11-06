@@ -20,7 +20,11 @@ export default function Referenzen() {
             <div style={{ display: 'flex', flexDirection: 'column', width: '50vh', height: '100vh', zIndex: '1', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                 <img src={reference1} style={{ transform: 'translate(-50%, 39%)' }}/>
                 <img src={reference3} style={{ transform: 'translate(50%, -57%)' }} />
+                <div>
+                    
+                </div>
                 <img src={reference2} style={{ transform: 'translate(0%, -57%)' }} />
+                <p>Hier sehen Sie ein paar Einblicke in meine Arbeit.</p>
             </div>
             <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
