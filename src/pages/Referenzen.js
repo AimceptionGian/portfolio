@@ -9,6 +9,16 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Referenzen() {
 
+    const referenzImages = [
+        ex1, ex2, ex3
+    ];
+
+    const referenzTexte = [
+        <p className='Referenzen-text'>Das wäre eine Beschreibung zu dem Bild auf der linken Seite.</p>,
+        <p className='Referenzen-text'>Hier würde ein sinnvoller Text stehen.</p>,
+        <p className='Referenzen-text'>Wow das ist ein weiterer platzhalter Text.</p>
+    ];
+
     const navigate = useNavigate();
 
     const handleNavButton = (newPage) => {
@@ -16,8 +26,8 @@ export default function Referenzen() {
     }
 
     return (
-        <div style={{ height: '200vh', width: '100vw' }}>
-            <div id='Referenzen-Nav' style={{ position: 'absolute', width: '100%', height: '100%' }}>
+        <div>
+            <div id='Referenzen-nav' style={{ position: 'absolute', width: '100%', height: '100%' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
                     <ul>
                         <li className='Nav-list' style={{ position: "absolute", left: "0" }}>
@@ -35,7 +45,7 @@ export default function Referenzen() {
             <div style={{ zIndex: '2', width: '100vh', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                 <h1>Referenzen</h1>
             </div>
-            <div id='Referenzen-Center' style={{ zIndex: '0', position: 'absolute', display: 'flex', flexDirection: 'column', justifyContent: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+            <div id='Referenzen-center' style={{ zIndex: '0', position: 'absolute', display: 'flex', flexDirection: 'column', justifyContent: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                 <div style={{ zIndex: '0', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                     <img src={reference1} className='Referenzen-images' />
                     <img src={reference3} className='Referenzen-images' />
@@ -46,20 +56,22 @@ export default function Referenzen() {
                     </div>
                     <img src={reference2} className='Referenzen-images' style={{ marginLeft: 'auto' }} />
                     <div style={{ width: '25%', transform: 'translate(0%, -5%)' }}>
-                        <p className='Referenzen-list' style={{ marginLeft: '-25%' }}>Java</p>
-                        <p className='Referenzen-list' style={{ marginLeft: '0%' }}>JavaScript</p>
-                        <p className='Referenzen-list' style={{ marginLeft: '25%' }}>PremierePro</p>
-                        <p className='Referenzen-list' style={{ marginLeft: '50%' }}>AfterEffects</p>
+                        <p className='Referenzen-category' style={{ marginLeft: '-25%' }}>Java</p>
+                        <p className='Referenzen-category' style={{ marginLeft: '0%' }}>JavaScript</p>
+                        <p className='Referenzen-category' style={{ marginLeft: '25%' }}>PremierePro</p>
+                        <p className='Referenzen-category' style={{ marginLeft: '50%' }}>AfterEffects</p>
                     </div>
                 </div>
             </div>
-            <div id='Referenzen' style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', transform: 'translate(0%, 100%)' }}>
-                <div id='Referenzen-Example1' style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                    <img src={ex2} className='Referenzen-images' style={{ width: '50%' }} />
-                    <p>Das wäre eine Beschreibung zu dem Bild auf der linken Seite.</p>
-                </div>
-                <div id='Referenzen-Example2'>
-                    <img src={ex3} className='Referenzen-images' />
+            <div style={{ height: '100vh' }} />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div id='Referenzen' className='Referenzen-list'>
+                    {referenzTexte.map((referenzText, index) => (
+                        <div id={`Referenzen-example${index}`} className={`Referenzen-pair${index % 2 === 0 ? "-even" : "-odd"}`}>
+                            <img src={referenzImages[index]} className='Referenzen-images' />
+                            {referenzText}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

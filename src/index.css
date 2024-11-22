@@ -38,10 +38,6 @@ p {
   text-align: center;
 }
 
-.Referenzen-list {
-  width: 50%;
-}
-
 .First-name {
   background: repeating-linear-gradient(
     to right,
@@ -118,7 +114,38 @@ li {
   list-style: none;
 }
 
+.Referenzen-category {
+  width: 50%;
+}
+
+.Referenzen-list {
+  width: 75%;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .Referenzen-images {
   width: 50%;
   height: auto;
+}
+
+.Referenzen-text {
+  margin: 5%;
+}
+
+.Referenzen-pair-even {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   transform: translate(-10%, 0%);
+   margin: 5%;
+}
+
+.Referenzen-pair-odd {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  transform: translate(10%, 0%);
+  margin: 5%;
 }
