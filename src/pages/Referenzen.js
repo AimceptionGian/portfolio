@@ -4,7 +4,7 @@ import reference2 from '../images/reference2.jpg';
 import reference3 from '../images/reference3.jpg';
 import ex1 from '../images/referenceEx1.jpg';
 import ex2 from '../images/referenceEx2.jpg';
-import ex3 from '../images/referenceEx3.jpg';
+import ex3 from '../images/referenceEx3-2.jpg';
 import { useNavigate } from 'react-router-dom';
 
 export default function Referenzen() {
@@ -42,7 +42,7 @@ export default function Referenzen() {
                     </ul>
                 </div>
             </div>
-            <div style={{ zIndex: '2', width: '100vh', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+            <div className='Title'>
                 <h1>Referenzen</h1>
             </div>
             <div id='Referenzen-center' style={{ zIndex: '0', position: 'absolute', display: 'flex', flexDirection: 'column', justifyContent: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
