@@ -1,11 +1,25 @@
 import '../index.css';
+import ex1 from '../images/referenceEx1.jpg';
+import ex2 from '../images/referenceEx2.jpg';
 import ex3 from '../images/referenceEx3-2.jpg';
 import { useNavigate } from 'react-router-dom';
 
 export default function Interessen() {
 
     const interessenImages = [
-        ex3, ex3, ex3, ex3, ex3, ex3, ex3, ex3, ex3
+        ex1, ex2, ex3, ex3, ex1, ex2, ex2, ex3, ex1
+    ];
+
+    const interessenTexte = [
+        <p>Interesse 1</p>,
+        <p>Interesse 2</p>,
+        <p>Interesse 3</p>,
+        <p>Interesse 4</p>,
+        <p>Interesse 5</p>,
+        <p>Interesse 6</p>,
+        <p>Interesse 7</p>,
+        <p>Interesse 8</p>,
+        <p>Interesse 9</p>
     ];
 
     const navigate = useNavigate();
@@ -40,8 +54,13 @@ export default function Interessen() {
                     <img src={ex3} style={{ height: '35%', width: 'auto', transform: 'translate(-10%, 35%)' }} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-                    {interessenImages.map((image) => (
-                        <img src={image} style={{ width: '33.33%' }} />
+                    {interessenImages.map((image, index) => (
+                        <div className='Interessen-image-container'>
+                            <img src={image} />
+                            <div className='Interessen-text'>
+                                {interessenTexte[index]}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>
