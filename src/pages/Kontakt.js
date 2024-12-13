@@ -1,6 +1,6 @@
 import '../index.css';
 import mail from '../images/mail.svg';
-import me from '../images/DSC08448.png'
+import me from '../images/DSC08448.png';
 import { useNavigate } from 'react-router-dom';
 
 export default function Kontakt() {
@@ -29,18 +29,20 @@ export default function Kontakt() {
                 </div>
             </div>
             <div className='Title'>
-                <h1 style={{ transform: 'translate(-15%,-75%)' }}>Kontakt</h1>
+                <h1 style={{ transform: 'translate(-10%,-125%)' }}>Kontakt</h1>
             </div>
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-end', width: '25%', marginLeft: '5%', marginRight: '5%', marginBottom: '10%' }}>
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={mail} style={{ width: '15%', marginRight: '2.5%' }} /> 
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-end', width: '30%', marginLeft: '5%', marginRight: '5%', marginBottom: '10%' }}>
+                    <a style={{ zIndex: '5', textDecoration: 'none', color: 'white', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} href='mailto:gianflurin@icloud.com'>
+                        <img src={mail} style={{ width: '15%', marginRight: '2.5%' }} />
                         <h2>gianflurin@icloud.com</h2>
-                    </div>
+                    </a>
                     <p style={{ padding: '10%', paddingTop: '5%' }}>Hier könnte Ihre Werbung stehen, oder auch nicht. Ich muss mir irgendeinen Text ausdenken, um diese Lücke zu füllen. Lorem ipsum dolor sit amet. Das ist Latein und bedeutet Platzhalter Platzhalter.</p>
                 </div>
-                <img src={me} style={{ width: 'auto', height: '35%' }}/>
-                <p>Noch so ein komischer Text. Was ist denn das? Nur komische Texte.</p>
+                <img src={me} style={{ width: 'auto', height: '35%' }} />
+                <div>
+                    <p style={{ width: '50%', margin: '5%' }}>Noch so ein komischer Text. Was ist denn das? Nur komische Texte.</p>
+                </div>
             </div>
         </div>
     )
