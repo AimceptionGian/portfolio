@@ -13,6 +13,12 @@ export default function Referenzen() {
         ex1, ex2, ex3
     ];
 
+    const additionalImages = [
+        [ex3, ex2, ex1, ex2],
+        [ex3, ex3, ex3, ex3],
+        [ex3, ex3, ex3, ex3],
+    ];
+
     const referenzTexte = [
         <p className='Referenzen-text'>Das wäre eine Beschreibung zu dem Bild auf der linken Seite.</p>,
         <p className='Referenzen-text'>Hier würde ein sinnvoller Text stehen.</p>,
@@ -65,10 +71,17 @@ export default function Referenzen() {
             </div>
             <div style={{ height: '100vh' }} />
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <div id='Referenzen' className='Referenzen-list'>
+                <div id="Referenzen" className="Referenzen-list">
                     {referenzTexte.map((referenzText, index) => (
-                        <div id={`Referenzen-example${index}`} className={`Referenzen-pair${index % 2 === 0 ? "-even" : "-odd"}`}>
-                            <img src={referenzImages[index]} className='Referenzen-images' />
+                        <div id={`Referenzen-example${index}`} className={`Referenzen-pair${index % 2 === 0 ? '-even' : '-odd'}`}>
+                            <div className="Referenzen-image-container">
+                                <img src={referenzImages[index]} style={{ width: '100%' }} />
+                                <div className="Referenzen-hover-images">
+                                    {[...Array(4)].map((_, hoverIndex) => (
+                                        <img key={hoverIndex} src={additionalImages[index][hoverIndex]} className="Referenzen-hover-image" alt={`Zusätzliches Bild ${hoverIndex + 1}`} />
+                                    ))}
+                                </div>
+                            </div>
                             {referenzText}
                         </div>
                     ))}

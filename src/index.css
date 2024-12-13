@@ -154,6 +154,34 @@ li {
   margin: 5%;
 }
 
+
+.Referenzen-image-container {
+  position: relative;
+  width: 50%;
+}
+
+.Referenzen-hover-images {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Referenzen-hover-image {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.Referenzen-image-container:hover .Referenzen-hover-images {
+  display: grid;
+  opacity: 1;
+}
+
 .Title {
   z-index: 2;
   width: 100vh;
