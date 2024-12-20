@@ -40,10 +40,10 @@ export default function Referenzen() {
                             <div className='Nav-button dark' onClick={() => handleNavButton("/")}>Gian Oechslin</div>
                         </li>
                         <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}>Kontakt</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}><p>Kontakt</p><p>Kontakt</p><p>Kontakt</p></div>
                         </li>
                         <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Interessen")}>Interessen</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/Interessen")}><p>Interessen</p><p>Interessen</p><p>Interessen</p></div>
                         </li>
                     </ul>
                 </div>

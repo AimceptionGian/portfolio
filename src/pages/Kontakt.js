@@ -20,10 +20,10 @@ export default function Kontakt() {
                             <div className='Nav-button dark' onClick={() => handleNavButton("/")}>Gian Oechslin</div>
                         </li>
                         <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Referenzen")}>Referenzen</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/Referenzen")}><p>Referenzen</p><p>Referenzen</p><p>Referenzen</p></div>
                         </li>
                         <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Interessen")}>Interessen</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/Interessen")}><p>Interessen</p><p>Interessen</p><p>Interessen</p></div>
                         </li>
                     </ul>
                 </div>

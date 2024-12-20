@@ -37,10 +37,10 @@ export default function Interessen() {
                             <div className='Nav-button dark' onClick={() => handleNavButton("/")}>Gian Oechslin</div>
                         </li>
                         <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}>Kontakt</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}><p>Kontakt</p><p>Kontakt</p><p>Kontakt</p></div>
                         </li>
                         <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Referenzen")}>Referenzen</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/Referenzen")}><p>Referenzen</p><p>Referenzen</p><p>Referenzen</p></div>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +64,7 @@ export default function Interessen() {
                     ))}
                 </div>
             </div>
-            
+
         </div>
     )
 }
