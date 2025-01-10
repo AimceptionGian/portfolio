@@ -37,7 +37,7 @@ export default function Referenzen() {
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
                     <ul>
                         <li className='Nav-list' style={{ position: "absolute", left: "0" }}>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/")}>Gian Oechslin</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/")}><p>Gian Oechslin</p><p>Gian Oechslin</p><p>Gian Oechslin</p></div>
                         </li>
                         <li className='Nav-list'>
                             <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}><p>Kontakt</p><p>Kontakt</p><p>Kontakt</p></div>
@@ -53,14 +53,14 @@ export default function Referenzen() {
             </div>
             <div id='Referenzen-center' style={{ zIndex: '0', position: 'absolute', display: 'flex', flexDirection: 'column', justifyContent: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                 <div style={{ zIndex: '0', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <img src={reference1} className='Referenzen-images' />
-                    <img src={reference3} className='Referenzen-images' />
+                    <img src={reference1} alt='Referenz Kategorie Nr. 1' className='Referenzen-images' />
+                    <img src={reference3} alt='Referenz Kategorie Nr. 2' className='Referenzen-images' />
                 </div>
                 <div style={{ zIndex: '0', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                     <div style={{ width: '25%', alignSelf: 'end', transform: 'translate(0%, 5%)' }}>
                         <p style={{ width: '125%', transform: 'translate(-33%)' }}>Hier sehen Sie eine Menge an spannenden Projekten, welche ich schon gemacht habe. Nebst Informatik-Projekten finden Sie auch eine Hand von Videoschnitt-Projekten.</p>
                     </div>
-                    <img src={reference2} className='Referenzen-images' style={{ marginLeft: 'auto' }} />
+                    <img src={reference2} alt='Referenz Kategorie Nr. 3' className='Referenzen-images' style={{ marginLeft: 'auto' }} />
                     <div style={{ width: '25%', transform: 'translate(0%, -5%)' }}>
                         <p className='Referenzen-category' style={{ marginLeft: '-25%' }}>Java</p>
                         <p className='Referenzen-category' style={{ marginLeft: '0%' }}>JavaScript</p>
@@ -75,7 +75,7 @@ export default function Referenzen() {
                     {referenzTexte.map((referenzText, index) => (
                         <div id={`Referenzen-example${index}`} className={`Referenzen-pair${index % 2 === 0 ? '-even' : '-odd'}`}>
                             <div className="Referenzen-image-container">
-                                <img src={referenzImages[index]} style={{ width: '100%' }} />
+                                <img src={referenzImages[index]} alt={'Referenzen Bild Nr. ' + index} style={{ width: '100%' }} />
                                 <div className="Referenzen-hover-images">
                                     {[...Array(4)].map((_, hoverIndex) => (
                                         <img key={hoverIndex} src={additionalImages[index][hoverIndex]} className="Referenzen-hover-image" alt={`Zusätzliches Bild ${hoverIndex + 1}`} />

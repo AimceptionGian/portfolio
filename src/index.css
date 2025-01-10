@@ -136,7 +136,7 @@ li {
   font-size: medium;
 
   position: absolute;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 
 .Nav-button p:nth-child(3) {

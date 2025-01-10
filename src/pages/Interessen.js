@@ -34,7 +34,7 @@ export default function Interessen() {
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
                     <ul>
                         <li className='Nav-list' style={{ position: "absolute", left: "0" }}>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/")}>Gian Oechslin</div>
+                            <div className='Nav-button dark' onClick={() => handleNavButton("/")}><p>Gian Oechslin</p><p>Gian Oechslin</p><p>Gian Oechslin</p></div>
                         </li>
                         <li className='Nav-list'>
                             <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}><p>Kontakt</p><p>Kontakt</p><p>Kontakt</p></div>
@@ -51,12 +51,12 @@ export default function Interessen() {
             <div>
                 <div style={{ height: '50vh', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                     <p style={{ zIndex: '1', width: '45%' }}>Hier könnte ein sinnvoller und guter Text stehen, aber stattdessen schreibe ich einen Text ohne Aussage um überhaupt mal einen Text stehen zu haben. Und jetzt füge ich den selben sinnlosen Text einfach nochmal ein. Hier könnte ein sinnvoller und guter Text stehen, aber stattdessen schreibe ich einen Text ohne Aussage um überhaupt mal einen Text stehen zu haben.</p>
-                    <img src={ex3} style={{ height: '35%', width: 'auto', transform: 'translate(-10%, 35%)' }} />
+                    <img src={ex3} alt='Interessen Bild Zentrum' style={{ height: '35%', width: 'auto', transform: 'translate(-10%, 35%)' }} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                     {interessenImages.map((image, index) => (
                         <div className='Interessen-image-container'>
-                            <img src={image} />
+                            <img src={image} alt={'Interessen Bild Nr. ' + index} />
                             <div className='Interessen-text'>
                                 {interessenTexte[index]}
                             </div>

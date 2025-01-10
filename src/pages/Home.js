@@ -32,7 +32,7 @@ export default function Home() {
                     <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}><p>Kontakt</p><p>Kontakt</p><p>Kontakt</p></div>
                 </div>
             </div>
-            <img src={white} style={{ width: '65%', objectFit: 'cover' }} />
+            <img src={white} alt='Hintergrundbild' style={{ width: '65%', objectFit: 'cover' }} />
         </div>
     )
 }
