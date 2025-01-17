@@ -37,11 +37,11 @@ export default function Kontakt() {
                         <img src={mail} alt='E-Mail Symbol' style={{ width: '15%', marginRight: '2.5%' }} />
                         <h2>gianflurin@icloud.com</h2>
                     </a>
-                    <p style={{ padding: '10%', paddingTop: '5%' }}>Hier könnte Ihre Werbung stehen, oder auch nicht. Ich muss mir irgendeinen Text ausdenken, um diese Lücke zu füllen. Lorem ipsum dolor sit amet. Das ist Latein und bedeutet Platzhalter Platzhalter.</p>
+                    <p style={{ padding: '10%', paddingTop: '5%' }}>Schreiben Sie mir gerne an diese E-Mail Adresse, wenn Sie Fragen zu der Seite oder Interesse an einer Zusammenarbeit haben. Ich freue mich auf Ihre Nachricht!</p>
                 </div>
                 <img src={me} alt='Bild von Gian Oechslin' style={{ width: 'auto', height: '35%' }} />
-                <div>
-                    <p style={{ width: '50%', margin: '5%' }}>Noch so ein komischer Text. Was ist denn das? Nur komische Texte.</p>
+                <div style={{ width: '40%' }}>
+                    <p style={{ width: '50%', margin: '5%' }}>Zurzeit besuche ich die IMS in Winterthur und werde mein Praktikum im Sommer starten.</p>
                 </div>
             </div>
         </div>

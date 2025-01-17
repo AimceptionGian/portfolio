@@ -1,5 +1,5 @@
 import '../index.css';
-import ex1 from '../images/referenceEx1.jpg';
+import ex1 from '../images/referenceEx1/referenceEx1.png';
 import ex2 from '../images/referenceEx2.jpg';
 import ex3 from '../images/referenceEx3-2.jpg';
 import { useNavigate } from 'react-router-dom';
