@@ -1,25 +1,37 @@
 import '../index.css';
-import ex1 from '../images/referenceEx1/referenceEx1.png';
-import ex2 from '../images/referenceEx2.jpg';
-import ex3 from '../images/referenceEx3-2.jpg';
+
+
+import int from '../images/interest/interest.jpg';
+
+import int1 from '../images/interest/politics.jpg';
+import int2 from '../images/interest/art.jpg';
+import int3 from '../images/interest/technology.jpg';
+import int4 from '../images/interest/music.jpg';
+import int5 from '../images/interest/lyricism.png';
+import int6 from '../images/interest/philosophy.jpg';
+import int7 from '../images/interest/videoediting.jpg';
+import int8 from '../images/interest/psychology.jpg';
+import int9 from '../images/interest/gaming.jpg';
+
+
 import { useNavigate } from 'react-router-dom';
 
 export default function Interessen() {
 
     const interessenImages = [
-        ex1, ex2, ex3, ex3, ex1, ex2, ex2, ex3, ex1
+        int1, int2, int3, int4, int5, int6, int7, int8, int9
     ];
 
     const interessenTexte = [
-        <p>Interesse 1</p>,
-        <p>Interesse 2</p>,
-        <p>Interesse 3</p>,
-        <p>Interesse 4</p>,
-        <p>Interesse 5</p>,
-        <p>Interesse 6</p>,
-        <p>Interesse 7</p>,
-        <p>Interesse 8</p>,
-        <p>Interesse 9</p>
+        <p>Politik</p>,
+        <p>Kunst</p>,
+        <p>Technologie</p>,
+        <p>Musik</p>,
+        <p>Lyrik</p>,
+        <p>Philosophie</p>,
+        <p>Videobearbeitung</p>,
+        <p>Psychologie</p>,
+        <p>Gaming</p>
     ];
 
     const navigate = useNavigate();
@@ -50,8 +62,8 @@ export default function Interessen() {
             </div>
             <div>
                 <div style={{ height: '50vh', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                    <p style={{ zIndex: '1', width: '45%' }}>Hier könnte ein sinnvoller und guter Text stehen, aber stattdessen schreibe ich einen Text ohne Aussage um überhaupt mal einen Text stehen zu haben. Und jetzt füge ich den selben sinnlosen Text einfach nochmal ein. Hier könnte ein sinnvoller und guter Text stehen, aber stattdessen schreibe ich einen Text ohne Aussage um überhaupt mal einen Text stehen zu haben.</p>
-                    <img src={ex3} alt='Interessen Bild Zentrum' style={{ height: '35%', width: 'auto', transform: 'translate(-10%, 35%)' }} />
+                    <p style={{ zIndex: '1', width: '45%' }}>Auf dieser Seite können Sie eine Galerie meiner Interessen sehen. Zugegeben war es sehr schwierig diese Galerie zusammenzustellen, da meine Interessen vielseitig und teilweise nicht wirklich vernünftig in einem Foto zusammenzufassen sind. Beim hovern über die Bilder erscheint eine kurze Beschreibung. Somit wird das Interesse hoffentlich klarer oder kann als kleines Ratespiel angesehen werden.</p>
+                    <img src={int} alt='Interessen Bild Zentrum' style={{ height: '35%', width: 'auto', transform: 'translate(-10%, 35%)', borderRadius: '10px' }} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                     {interessenImages.map((image, index) => (

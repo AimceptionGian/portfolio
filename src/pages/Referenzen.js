@@ -1,18 +1,19 @@
 import '../index.css';
+
 import reference1 from '../images/reference1.jpg';
 import reference2 from '../images/reference2.jpg';
 import reference3 from '../images/reference3.jpg';
 
-import ex1 from '../images/referenceEx1/referenceEx1.png';
-import ex1_1 from '../images/referenceEx1/referenceEx1_1.png';
-import ex1_2 from '../images/referenceEx1/referenceEx1_2.png';
-import ex1_3 from '../images/referenceEx1/referenceEx1_3.png';
-import ex1_4 from '../images/referenceEx1/referenceEx1_4.png';
+import ex1 from '../images/reference/Ex1/referenceEx1.png';
+import ex1_1 from '../images/reference/Ex1/referenceEx1_1.png';
+import ex1_2 from '../images/reference/Ex1/referenceEx1_2.png';
+import ex1_3 from '../images/reference/Ex1/referenceEx1_3.png';
+import ex1_4 from '../images/reference/Ex1/referenceEx1_4.png';
 
-import ex2 from '../images/referenceEx2/referenceEx2.png';
-import ex2_1 from '../images/referenceEx2/referenceEx2_1.png';
-import ex2_2 from '../images/referenceEx2/referenceEx2_2.png';
-import ex2_3 from '../images/referenceEx2/referenceEx2_3.png';
+import ex2 from '../images/reference/Ex2/referenceEx2.png';
+import ex2_1 from '../images/reference/Ex2/referenceEx2_1.png';
+import ex2_2 from '../images/reference/Ex2/referenceEx2_2.png';
+import ex2_3 from '../images/reference/Ex2/referenceEx2_3.png';
 
 import { useNavigate } from 'react-router-dom';
 
