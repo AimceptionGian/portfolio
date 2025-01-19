@@ -1,6 +1,6 @@
 # Portfolio Projekt
 
-
+Zu der Dokumentation geht es [hier](https://github.com/AimceptionGian/portfolio/wiki)
 
 ## Installation
 
