@@ -15,22 +15,49 @@ import ex2_1 from '../images/reference/Ex2/referenceEx2_1.png';
 import ex2_2 from '../images/reference/Ex2/referenceEx2_2.png';
 import ex2_3 from '../images/reference/Ex2/referenceEx2_3.png';
 
+import ex3 from '../images/reference/Ex3/referenceEx3.jpg';
+import ex3_1 from '../images/reference/Ex3/referenceEx3_1.jpg';
+
+import ex4 from '../images/reference/Ex4/referenceEx4.jpg';
+
+import ex5 from '../images/reference/Ex5/referenceEx5.jpg';
+import ex5_1 from '../images/reference/Ex5/referenceEx5_1.jpg';
+import ex5_2 from '../images/reference/Ex5/referenceEx5_2.jpg';
+import ex5_3 from '../images/reference/Ex5/referenceEx5_3.jpg';
+
+import ex6 from '../images/reference/Ex6/referenceEx6.jpg';
+
+import ex7 from '../images/reference/Ex7/referenceEx7.jpg';
+import ex7_1 from '../images/reference/Ex7/referenceEx7_1.jpg';
+import ex7_2 from '../images/reference/Ex7/referenceEx7_2.jpg';
+import ex7_3 from '../images/reference/Ex7/referenceEx7_3.jpg';
+
 import { useNavigate } from 'react-router-dom';
 
 export default function Referenzen() {
 
     const referenzImages = [
-        ex1, ex2
+        ex1, ex2, ex3, ex4, ex5, ex6, ex7,
     ];
 
     const additionalImages = [
         [ex1_1, ex1_4, ex1_3, ex1_2],
         [ex2, ex2_1, ex2_2, ex2_3],
+        [ex3_1],
+        [ex4],
+        [ex5, ex5_1, ex5_2, ex5_3],
+        [ex6],
+        [ex7, ex7_1, ex7_2, ex7_3],
     ];
 
     const referenzTexte = [
         <p className='Referenzen-text'>Hier habe ich das Kultspiel Minesweeper mit JavaFX nachprogrammiert. Die Grafiken habe ich digital selbst gezeichnet. Ziel des Spiel ist es alle Felder aufzudecken ohne dabei auf eine Bombe zu klicken. Die Felder zeigen an wieviele Bomben angrenzen.</p>,
         <p className='Referenzen-text'>Im Rahmen eines Schulprojekts habe ich einen Versicherungsrechner gestaltet. Als Versicherungsart habe ich mich für eine Cyberversicherung entschieden. Die Seite ist modern und übersichtlich gehalten und sollte somit für junge Leute zugänglicher sein.</p>,
+        <p className='Referenzen-text'>Diese Unterwasserlandschaft habe ich in Zusammenarbeit mit einigen talentierten Leuten gemalt. Dazu beigetragen habe ich den Kampffisch. Zuerst habe ich ihn auf einem Papier gemalt, um die Technik rauszubekommen und die Platzierung auf dem finalen Gemälde besser wählen zu können.</p>,
+        <p className='Referenzen-text'>Hier habe ich Grusskarten mit Wasserfarbe ausgeschnitten und gestaltet. Zuerst habe ich die Feder mit Bleistift vorgezeichnet und dann darüber den Farbverlauf gemacht. Zum Schluss habe ich mit einem Wasserfesten Stift die Muster in die Feder gezeichnet.</p>,
+        <p className='Referenzen-text'>Diese Specksteinskulptur sollte eine Katze darstellen. In vielen mühsahmen Schritten habe ich einen Block aus Speckstein immer weiter abgefeilt um die grobe Form der Katze zu sehen. Anschliessend habe ich mit feineren Werkzeugen und Schleiffpapier die Details aus dem Stein gebracht. Am Ende habe ich die Skulptur mit Nassschleiffpapier und Öl poliert.</p>,
+        <p className='Referenzen-text'>Diesen Stein habe ich mit einer sogenannten Dot-Painting-Technik bemalt. Das Sujet habe ich zuerst mit Bleistift vorgezeichnet, um es dann anschliessend mit Acrylfarbe zu übertupfen.</p>,
+        <p className='Referenzen-text'>Hier sehen Sie zwei Acrylbilder. Zur besseren Veranschauung habe ich die Bilder auf einer Webseite in einem Raum aufhängen lassen. Da die Webseite viele Einschränkungen hat, konnte ich das erste Bild nicht schräg aufhängen, wie es eigentlich angedacht ist.</p>,
     ];
 
     const navigate = useNavigate();
@@ -85,9 +112,24 @@ export default function Referenzen() {
                             <div className="Referenzen-image-container">
                                 <img src={referenzImages[index]} alt={'Referenzen Bild Nr. ' + index} style={{ width: '100%' }} />
                                 <div className="Referenzen-hover-images">
-                                    {[...Array(4)].map((_, hoverIndex) => (
-                                        <img key={hoverIndex} src={additionalImages[index][hoverIndex]} className="Referenzen-hover-image" alt={`Zusätzliches Bild ${hoverIndex + 1}`} />
-                                    ))}
+                                    {additionalImages[index] && additionalImages[index].filter(Boolean).length === 1 ? (
+                                        <img
+                                            src={additionalImages[index][0]}
+                                            className="Referenzen-hover-image full-size"
+                                            alt="Einzelnes Bild"
+                                        />
+                                    ) : (
+                                        [...Array(4)].map((_, hoverIndex) => (
+                                            additionalImages[index] && additionalImages[index][hoverIndex] ? (
+                                                <img
+                                                    key={hoverIndex}
+                                                    src={additionalImages[index][hoverIndex]}
+                                                    className="Referenzen-hover-image"
+                                                    alt={`Zusätzliches Bild ${hoverIndex + 1}`}
+                                                />
+                                            ) : null
+                                        ))
+                                    )}
                                 </div>
                             </div>
                             {referenzText}

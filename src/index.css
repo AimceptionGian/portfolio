@@ -222,11 +222,12 @@ li {
 .Referenzen-image-container {
   position: relative;
   width: 50%;
+  overflow: hidden;
 }
 
 .Referenzen-hover-images {
   display: none;
-  position: absolute;
+  position: absolute; 
   top: 0;
   left: 0;
   display: grid;
@@ -237,6 +238,12 @@ li {
 
 .Referenzen-hover-image {
   width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.Referenzen-hover-image.full-size{
+  width: 200%;
   height: auto;
   margin: 0;
 }
