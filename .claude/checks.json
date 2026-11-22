@@ -1,0 +1,6 @@
+{
+  "checks": [
+    { "name": "Build", "command": "npm run build --silent", "timeout": 300 }
+  ],
+  "maxBlocks": 3
+}

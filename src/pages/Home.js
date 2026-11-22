@@ -1,38 +1,34 @@
-import '../index.css';
-import white from '../images/white.jpg';
-import { useNavigate } from 'react-router-dom';
+import paper from '../images/white.jpg';
+import Nav, { SlideButton } from '../components/Nav';
+
+function Name() {
+  return (
+    <>
+      <span className='hero__first'>Gian</span>
+      <span className='hero__last'>Oechslin</span>
+    </>
+  );
+}
 
 export default function Home() {
+  return (
+    <main className='home'>
+      <Nav home />
 
-    const navigate = useNavigate();
+      <div className='home__paper' style={{ backgroundImage: `url(${paper})` }} aria-hidden='true' />
 
-    const handleNavButton = (newPage) => {
-        navigate(newPage);
-    }
+      {/* Der Name liegt zweimal übereinander: hell über der dunklen Fläche,
+          dunkel über dem Papier. Die Trennlinie folgt exakt der Flächengrenze. */}
+      <h1 className='hero__name'>
+        <span className='hero__layer hero__layer--light'><Name /></span>
+        <span className='hero__layer hero__layer--dark' aria-hidden='true'><Name /></span>
+      </h1>
 
-    return (
-        <div style={{ display: 'flex', justifyContent: 'flex-end', height: '100vh' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', width: '100vh', position: 'absolute', top: '40%', left: '35%', transform: 'translate(-50%, -50%)' }}>
-                <h1 className='First-name'>Gian</h1>
-                <h1 className='Name'>Oechslin</h1>
-            </div>
-            <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
-                    <ul>
-                        <li className='Nav-List'>
-                            <div className='Nav-button' onClick={() => handleNavButton("/Referenzen")}><p>Referenzen</p><p>Referenzen</p><p>Referenzen</p></div>
-                        </li>
-                        <li className='Nav-List'>
-                            <div className='Nav-button' onClick={() => handleNavButton("/Interessen")}><p>Interessen</p><p>Interessen</p><p>Interessen</p></div>
-                        </li>
-                    </ul>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '17%', position: 'absolute', top: '70%', left: '17%', transform: 'translate(-50%, -50%)' }}>
-                    <p>Interessiert an einer Zusammenarbeit oder haben Sie Fragen?</p>
-                    <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}><p>Kontakt</p><p>Kontakt</p><p>Kontakt</p></div>
-                </div>
-            </div>
-            <img src={white} alt='Hintergrundbild' style={{ width: '65%', objectFit: 'cover' }} />
-        </div>
-    )
+      <div className='home__cta'>
+        <span className='eyebrow'>Portfolio</span>
+        <p>Interessiert an einer Zusammenarbeit oder haben Sie Fragen?</p>
+        <SlideButton to='/Kontakt' variant='light'>Kontakt</SlideButton>
+      </div>
+    </main>
+  );
 }

@@ -1,6 +1,3 @@
-import '../index.css';
-
-
 import int from '../images/interest/interest.jpg';
 
 import int1 from '../images/interest/politics.jpg';
@@ -13,70 +10,57 @@ import int7 from '../images/interest/videoediting.jpg';
 import int8 from '../images/interest/psychology.jpg';
 import int9 from '../images/interest/gaming.jpg';
 
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
+import Reveal from '../components/Reveal';
 
-import { useNavigate } from 'react-router-dom';
+const interessen = [
+    { image: int1, label: 'Politik' },
+    { image: int2, label: 'Kunst' },
+    { image: int3, label: 'Technologie' },
+    { image: int4, label: 'Musik' },
+    { image: int5, label: 'Lyrik' },
+    { image: int6, label: 'Philosophie' },
+    { image: int7, label: 'Videobearbeitung' },
+    { image: int8, label: 'Psychologie' },
+    { image: int9, label: 'Gaming' },
+];
 
 export default function Interessen() {
-
-    const interessenImages = [
-        int1, int2, int3, int4, int5, int6, int7, int8, int9
-    ];
-
-    const interessenTexte = [
-        <p>Politik</p>,
-        <p>Kunst</p>,
-        <p>Technologie</p>,
-        <p>Musik</p>,
-        <p>Lyrik</p>,
-        <p>Philosophie</p>,
-        <p>Videobearbeitung</p>,
-        <p>Psychologie</p>,
-        <p>Gaming</p>
-    ];
-
-    const navigate = useNavigate();
-
-    const handleNavButton = (newPage) => {
-        navigate(newPage);
-    }
-
     return (
-        <div>
-            <div id='Interessen-nav' style={{ position: 'absolute', width: '100%', height: '100%' }}>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
-                    <ul>
-                        <li className='Nav-list' style={{ position: "absolute", left: "0" }}>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/")}><p>Gian Oechslin</p><p>Gian Oechslin</p><p>Gian Oechslin</p></div>
-                        </li>
-                        <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Kontakt")}><p>Kontakt</p><p>Kontakt</p><p>Kontakt</p></div>
-                        </li>
-                        <li className='Nav-list'>
-                            <div className='Nav-button dark' onClick={() => handleNavButton("/Referenzen")}><p>Referenzen</p><p>Referenzen</p><p>Referenzen</p></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div className='Title'>
-                <h1>Interessen</h1>
-            </div>
-            <div>
-                <div style={{ height: '50vh', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                    <p style={{ zIndex: '1', width: '45%' }}>Auf dieser Seite können Sie eine Galerie meiner Interessen sehen. Zugegeben war es sehr schwierig diese Galerie zusammenzustellen, da meine Interessen vielseitig und teilweise nicht wirklich vernünftig in einem Foto zusammenzufassen sind. Beim hovern über die Bilder erscheint eine kurze Beschreibung. Somit wird das Interesse hoffentlich klarer oder kann als kleines Ratespiel angesehen werden.</p>
-                    <img src={int} alt='Interessen Bild Zentrum' style={{ height: '35%', width: 'auto', transform: 'translate(-10%, 35%)', borderRadius: '10px' }} />
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-                    {interessenImages.map((image, index) => (
-                        <div className='Interessen-image-container'>
-                            <img src={image} alt={'Interessen Bild Nr. ' + index} />
-                            <div className='Interessen-text'>
-                                {interessenTexte[index]}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+        <>
+            <Nav />
+            <main className='page'>
+                <section className='intro'>
+                    <Reveal className='intro__text'>
+                        <span className='eyebrow'>Was mich bewegt</span>
+                        <h1 className='page-title'>Interessen</h1>
+                        <p className='lead'>
+                            Auf dieser Seite können Sie eine Galerie meiner Interessen sehen. Zugegeben war es sehr
+                            schwierig, diese Galerie zusammenzustellen, da meine Interessen vielseitig und teilweise
+                            nicht wirklich vernünftig in einem Foto zusammenzufassen sind. Beim Hovern über die Bilder
+                            erscheint eine kurze Beschreibung. Somit wird das Interesse hoffentlich klarer oder kann als
+                            kleines Ratespiel angesehen werden.
+                        </p>
+                    </Reveal>
+                    <Reveal className='intro__media' delay={120}>
+                        <img src={int} alt='Collage zu meinen Interessen' className='framed' />
+                    </Reveal>
+                </section>
 
-        </div>
-    )
+                <section className='tiles' aria-label='Galerie der Interessen'>
+                    {interessen.map((item, index) => (
+                        <Reveal key={item.label} className='tile' delay={(index % 3) * 80} tabIndex={0}>
+                            <img src={item.image} alt={item.label} loading='lazy' decoding='async' />
+                            <div className='tile__overlay'>
+                                <span className='tile__index'>{String(index + 1).padStart(2, '0')}</span>
+                                <span className='tile__label'>{item.label}</span>
+                            </div>
+                        </Reveal>
+                    ))}
+                </section>
+            </main>
+            <Footer />
+        </>
+    );
 }
